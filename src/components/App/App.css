@@ -1,0 +1,5 @@
+.App {
+  height: 100%;
+  display: grid;
+  grid-template: max-content minmax(max-content, calc(100% - 158px)) 60px / auto;  
+}
