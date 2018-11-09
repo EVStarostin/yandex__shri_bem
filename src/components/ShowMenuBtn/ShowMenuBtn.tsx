@@ -10,19 +10,13 @@ export interface ShowMenuBtnProps extends IClassNameProps {
   handleClick?: () => void;
 }
 
-class ShowMenuBtn extends React.Component<ShowMenuBtnProps> {
-  public render() {
-    const { className } = this.props;
-
-    return (
-      <button
-        className={cnShowMenuBtn(null, [className])}
-        onClick={this.props.handleClick}
-      >
-        <img src={menuImg} alt="бургерное меню" />
-      </button>
-    );
-  }
-}
+const ShowMenuBtn: React.SFC<ShowMenuBtnProps> = ({ className, handleClick }) => (
+  <button
+    className={cnShowMenuBtn(null, [className])}
+    onClick={handleClick}
+  >
+    <img src={menuImg} alt="бургерное меню" />
+  </button>
+);
 
 export default ShowMenuBtn;

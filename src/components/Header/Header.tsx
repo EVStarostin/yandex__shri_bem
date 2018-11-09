@@ -12,7 +12,7 @@ export interface HeaderState {
   menuExpanded: boolean;
 }
 
-class Header extends React.Component<IClassNameProps, HeaderState> {
+class Header extends React.PureComponent<IClassNameProps, HeaderState> {
   constructor(props: IClassNameProps) {
     super(props);
     this.state = { menuExpanded: false };

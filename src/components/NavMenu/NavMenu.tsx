@@ -5,8 +5,8 @@ import './NavMenu.css';
 
 const cnNavMenu = cn('NavMenu');
 
-class NavMenu extends React.Component<IClassNameProps> {
-  private menuItems = [
+const NavMenu: React.SFC<IClassNameProps> = ({ className }) => {
+  const menuItems = [
     { id: 1, href: "/", title: "События" },
     { id: 2, href: "#", title: "Сводка" },
     { id: 3, href: "#", title: "Устройства" },
@@ -14,25 +14,20 @@ class NavMenu extends React.Component<IClassNameProps> {
     { id: 5, href: "#", title: "Видеонаблюдение" },
   ];
 
-  public render() {
-    const { className } = this.props;
-    const { pathname } = location;
-
-    return (
-      <ul className={cnNavMenu(null, [className])}>
-        {this.menuItems.map(item => (
-          <li key={item.id} className={cnNavMenu('Item')}>
-            <a
-              href={item.href}
-              className={cnNavMenu('ItemLink', { active: item.href === pathname })}
-            >
-              {item.title}
-            </a>
-          </li>
-        ))}
-      </ul>
-    );
-  }
+  return (
+    <ul className={cnNavMenu(null, [className])}>
+      {menuItems.map(item => (
+        <li key={item.id} className={cnNavMenu('Item')}>
+          <a
+            href={item.href}
+            className={cnNavMenu('ItemLink', { active: item.href === location.pathname })}
+          >
+            {item.title}
+          </a>
+        </li>
+      ))}
+    </ul>
+  );
 }
 
 export default NavMenu;
