@@ -1,0 +1,14 @@
+.Button {
+  background: #E5E5E5;
+  border: none;
+  border-radius: 8px;
+  width: 132px;
+  height: 54px;
+  font-weight: 700;
+  font-size: inherit;
+}
+
+.Button:hover {
+  background: #dad5d5;
+  cursor: pointer;
+}

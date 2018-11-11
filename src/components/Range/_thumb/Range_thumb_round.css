@@ -1,0 +1,42 @@
+.Range_thumb_round::-webkit-slider-runnable-track {
+  height: 4px;
+  cursor: pointer;
+  background: #d8d8d8;
+}
+
+.Range_thumb_round::-webkit-slider-thumb {
+  height: 17px;
+  width: 17px;
+  background: #605757;
+  margin-top: -7px;
+  border-radius: 50%;
+}
+
+.Range_thumb_round::-moz-range-track {
+  height: 4px;
+  background: #d8d8d8;
+}
+
+.Range_thumb_round::-moz-range-thumb {
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  background: #605757;
+}
+
+.Range_thumb_round::-ms-track {
+  height: 2px;
+  background: #d8d8d8;
+}
+
+.Range_thumb_round::-ms-fill-lower {
+  border: 0;
+}
+
+.Range_thumb_round::-ms-fill-upper {
+  border: 0;
+}
+
+.Range_thumb_round::-ms-thumb {
+  margin-top: 0;
+}

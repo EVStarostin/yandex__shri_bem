@@ -1,0 +1,13 @@
+.EventsList {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1.3vw;
+  list-style: none;
+  padding: 0;
+}
+
+@media screen and (max-width: 767.98px) {
+  .EventsList {
+    grid-gap: 16px;
+  }
+}

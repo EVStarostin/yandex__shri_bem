@@ -3,29 +3,31 @@ export interface Event {
   title: string;
   source: string;
   time: string;
-  description: string;
+  description: string | null;
   icon: string;
   size: string;
-  data?: {
-    type?: string;
-    values?: {
-      electricity: Array<number | string>;
-      water: Array<number | string>;
-      gas: Array<number | string>;
-    };
-    buttons?: string[];
-    image?: string;
-    temperature?: number;
-    humidity?: string;
-    albumcover?: string;
-    artist?: string;
-    track?: {
-      name: string;
-      length: string;
-    };
-    volume?: number;
-  };
+  data?: Data;
 }
+
+export interface Data {
+  type?: string;
+  values?: {
+    electricity: Array<number | string>;
+    water: Array<number | string>;
+    gas: Array<number | string>;
+  };
+  buttons?: string[];
+  image?: string;
+  temperature?: number;
+  humidity?: string;
+  albumcover?: string;
+  artist?: string;
+  track?: {
+    name: string;
+    length: string;
+  };
+  volume?: number;
+};
 
 export interface StoreState {
   events: Event[];

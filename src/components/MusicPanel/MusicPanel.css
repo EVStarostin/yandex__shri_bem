@@ -1,0 +1,101 @@
+
+.MusicPanel {
+  display: grid;
+  grid-template: 26px 26px 15px 52px / 70px 70px minmax(70px, 1fr) 52px;
+  grid-template-areas:  "c n n n"
+                        "c tl tl t"
+                        ". . . ."
+                        "b f vl v";
+  margin-top: 25px;
+  font-size: 1.25rem;
+  color: #000;
+}
+
+.MusicPanel-AlbumCover {
+  grid-area: c;
+  width: 52px;
+  height: 52px;
+}
+
+.MusicPanel-TrackName {
+  grid-area: n;
+  margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #000;
+}
+
+.MusicPanel-TimeLine {
+  grid-area: tl;
+  margin: 0;
+}
+
+.MusicPanel-TrackLength {
+  grid-area: t;
+  margin: 0;
+  margin-left: 10px;
+  align-self: center;
+  color: #a1a1a1;
+  font-size: 0.875rem;
+}
+
+.MusicPanel-PreviousBtn,
+.MusicPanel-ForwardBtn {
+  border: none;
+  background: none;
+  padding: 0;
+  opacity: .7;
+}
+
+.MusicPanel-PreviousBtn {
+  grid-area: b;
+  background: url(images/Prev.svg) no-repeat center;
+}
+
+.MusicPanel-ForwardBtn {
+  grid-area: f;
+  transform: rotate(180deg);
+  background: url(images/Prev.svg) no-repeat center;
+}
+
+.MusicPanel-PreviousBtn:hover,
+.MusicPanel-ForwardBtn:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.MusicPanel-VolumeControl {
+  grid-area: vl;
+  background-color: inherit;
+  margin: 0;
+}
+
+.MusicPanel-TimeLine,
+.MusicPanel-VolumeControl {
+  width: 100%;
+  background: transparent;
+  height: 100%;
+}
+
+.MusicPanel-Volume {
+  grid-area: v;
+  margin: 0;
+  margin-left: 10px;
+  align-self: center;
+  color: #a1a1a1;
+  font-size: 0.875rem;
+}
+
+@media screen and (min-width: 1800px) {
+  .MusicPanel {
+    grid-template: 32px 32px 15px 52px / 70px 70px minmax(70px, 1fr) 52px;
+    grid-template-areas: "c n n n" "c tl tl t" ". . . ." "b f vl v";
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .MusicPanel-TrackName {
+    font-size: 1.633rem;
+  }
+}

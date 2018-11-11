@@ -1,0 +1,22 @@
+.Card_type_critical .Card-CloseBtn {
+  background-image: url(images/cross-white.svg);
+  background-color: transparent;
+}
+
+.Card_type_critical,
+.Card_type_critical:hover {
+  background: #DB5341;
+}
+
+.Card_type_critical .Card-Info {
+  margin-bottom: 20px;
+}
+
+.Card_type_critical .Card-Title {
+  color: #fff;
+}
+
+.Card_type_critical .Card-SourceAndTime {
+  color: #fff;
+}
+

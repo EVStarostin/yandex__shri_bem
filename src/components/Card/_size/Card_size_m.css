@@ -1,0 +1,9 @@
+.Card_size_m {
+  grid-column: span 3;
+}
+
+@media screen and (max-width: 767.98px) {
+  .Card_size_m {
+    grid-column: span 6;
+  }
+}

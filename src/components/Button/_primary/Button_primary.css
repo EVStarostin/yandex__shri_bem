@@ -1,0 +1,8 @@
+.Button_primary {
+  background: #FFD93E;
+}
+
+.Button_primary:hover {
+  background: #efc92f;
+}
+

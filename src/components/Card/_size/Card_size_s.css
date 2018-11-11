@@ -1,0 +1,17 @@
+.Card_size_s {
+  grid-column: span 2;
+}
+
+.Card_size_s .Card-SourceAndTime {
+  flex-direction: column;
+}
+
+@media screen and (max-width: 767.98px) {
+  .Card_size_s {
+    grid-column: span 6;
+  }
+
+  .Card_size_s .Card-SourceAndTime {
+    flex-direction: row;
+  }
+}

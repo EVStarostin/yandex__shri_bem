@@ -3,7 +3,7 @@ import { cn } from '@bem-react/classname';
 import { IClassNameProps } from '@bem-react/core';
 import './NavMenu.css';
 
-const cnNavMenu = cn('NavMenu');
+export const cnNavMenu = cn('NavMenu');
 
 const NavMenu: React.SFC<IClassNameProps> = ({ className }) => {
   const menuItems = [
