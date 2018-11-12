@@ -9,36 +9,30 @@ In the project directory, you can run:
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `npm run build`
 
 Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+___
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## ДЗ - «БЭМ»
+Страница *"События"* сверстана на *React* с использованием библиотеки `bem-react`.
+Страница состоит из независимых блоков, готовых к повторному переиспользованию. Имена всех классов формируются с помощью пакета `@bem-react/cn`. Модификаторы применяются с помощью пакет `@bem-react/core`, а переопределение компонентов с помощью `@bem-react/di`.  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Структура
+- **Header** состоит из двух блоков:
+  - `Logo` - Логотип (возможно использование где-либо помимо блока *Header*)  
+  - `NavMenu` - Навигационное меню. Для активной ссылки добавляется модификатор `_active`.  
+  На экранах, ширина которых меньше 768px, меню имеет два состояния - свернутое и развернутое. У навигационного меню есть булевый модификатор `_expanded`, при наличии которого меню развернуто. Значение модификатора меняется по клику на *бургеное меню* (компонент `ShowMenuBtn`).  
 
-### `npm run eject`
+- **Footer** отображается только на десктопных экранах (так было в макете к самому первому ДЗ). Платформа (touch или desktop) определяется по наличию события *ontouchstart* на глобальном объекте *window*.  
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Main** основной контект - это список событий. Для отображения события используются компоненты:
+  - `EventsList` - компонент получает список событий с сервера и передает данные в дочерний компонент    
+  - `Card` - блок-контейнер, который имеет модификаторы:  
+    - `_size_s`, `_size_m`, `size_l` - сколько колонок занимает блок.  
+    - `_type_critical` - красный фон блока.  
+    На десктопах крестики в правом верхнем углу карточки появляются только по наведению, на touch-устройствах отображаются всегда.  
+  - `EventData` - компонент, отображающий информацию по событиям в зависимости от типа. Для возможности переиспользования в будущем вынесены в отдельные компоненты:  
+    - `Button` - кнопка, у которой есть булевый модификатор `_primary`, влияющий на цвет кнопки.  
+    - `MusicPanel` - панель управления музыкой. Ползунки управления громкостью и time-line также вынесены в отдельный компонент `Range`, который может быть стандартным с прямоугольной ручкой и с круглой - модификатор `_thumb_round`.  
+    - `Camera` - камера видеонаблюдения. Жесты для зуммирования, скрола и изменения яркости на React пока перенести не успел.  
