@@ -1,10 +1,9 @@
-import { cn } from '@bem-react/classname';
 import { withBemMod, IClassNameProps } from '@bem-react/core';
-import './Button_primary.css';
 import { cnButton } from '../Button';
+import './Button_primary.css';
 
 interface ButtonWithModProps extends IClassNameProps {
-  thumb?: string;
+  primary?: boolean;
 }
 
-export default withBemMod<ButtonWithModProps>(cnButton(), { primary: true });
+export const ButtonPrimary = withBemMod<ButtonWithModProps>(cnButton(), { primary: true });

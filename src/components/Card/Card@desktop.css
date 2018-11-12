@@ -1,0 +1,17 @@
+.Card:hover {
+  background: #F3F3F3;
+  box-shadow: 0 2px 6px 0 rgba(197,186,186,0.50);
+}
+
+.Card_type_critical:hover {
+  background: #DB5341;
+}
+
+.Card:hover .Card-CloseBtn,
+.Card:hover .Card-OpenBtn {
+  visibility: visible;
+}
+
+.Card:hover .Card-Data {
+  background-color: #f3f3f3;
+}

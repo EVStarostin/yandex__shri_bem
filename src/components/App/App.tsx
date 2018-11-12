@@ -1,18 +1,23 @@
 import * as React from 'react';
 import { cn } from '@bem-react/classname';
+import { Header } from '../Header/Header';
+import { Main } from '../Main/Main';
+import { cnFooter } from '../Footer/Footer';
 import './App.css';
-import Header from '../Header/Header';
-import Main from '../Main/Main';
-import Footer from '../Footer/Footer';
+import { RegistryConsumer } from '@bem-react/di';
 
-const cnApp = cn('App');
+export const cnApp = cn('App');
 
-const App: React.SFC = () => (
+export const App: React.SFC = () => (
   <div className={cnApp()}>
     <Header />
     <Main />
-    <Footer />
+    <RegistryConsumer>
+      {registries => {
+        const registry = registries[cnApp()];
+        const Footer = registry.get(cnFooter());
+        return <Footer />;
+      }}
+    </RegistryConsumer>
   </div>
 );
-
-export default App;

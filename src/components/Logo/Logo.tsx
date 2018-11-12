@@ -5,10 +5,8 @@ import logoImg from './images/logo.svg';
 
 const cnLogo = cn('Logo');
 
-const Logo: React.SFC<IClassNameProps> = ({ className }) => (
+export const Logo: React.SFC<IClassNameProps> = ({ className }) => (
   <a href="#" className={cnLogo(null, [className])}>
     <img src={logoImg} alt="Логотип Яндекса" />
   </a>
 );
-
-export default Logo;

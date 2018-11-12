@@ -8,11 +8,6 @@
   position: relative;
 }
 
-.Card:hover {
-  background: #F3F3F3;
-  box-shadow: 0 2px 6px 0 rgba(197,186,186,0.50);
-}
-
 .Card-Heading {
   display: flex;
   font-size: 1.3rem;
@@ -77,15 +72,6 @@
 .Card-OpenBtn {
   bottom: 1vw;
   background-image: url(images/Next.svg);
-}
-
-.Card:hover .Card-CloseBtn,
-.Card:hover .Card-OpenBtn {
-  visibility: visible;
-}
-
-.Card:hover>div:not(.Card-Info) {
-  background-color: #f3f3f3;
 }
 
 @media screen and (max-width: 991.98px) {

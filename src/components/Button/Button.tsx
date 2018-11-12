@@ -5,10 +5,14 @@ import './Button.css';
 
 export const cnButton = cn('Button');
 
-const Button: React.SFC<IClassNameProps> = ({ className, children }) => (
-  <button className={cnButton(null, [className])}>
-    {children}
-  </button>
-);
+export class Button extends React.PureComponent<IClassNameProps> {
+  public render() {
+    const { children, className } = this.props;
 
-export default Button;
+    return (
+      <button className={cnButton(null, [className])}>
+        {children}
+      </button>
+    );
+  }
+}

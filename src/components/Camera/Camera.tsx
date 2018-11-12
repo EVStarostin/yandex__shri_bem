@@ -5,9 +5,9 @@ import './Camera.css';
 
 export const cnCamera = cn('Camera');
 
-const Camera: React.SFC<IClassNameProps> = ({ className }) => (
+export const Camera: React.SFC<IClassNameProps> = ({ className }) => (
   <div className={cnCamera(null, [className])}>
-  <div className={cnCamera('Img')} touch-action="none" title="Двойной клик для перехода к обзору 360 градусов"></div>
+  <div className={cnCamera('Img')} touch-action="none"></div>
   <div className={cnCamera('Info')}>
     <div className={cnCamera('ScrollBarArea')}>
       <div className={cnCamera('ScrollBar')} />
@@ -20,5 +20,3 @@ const Camera: React.SFC<IClassNameProps> = ({ className }) => (
   </div>
 </div>
 );
-
-export default Camera;

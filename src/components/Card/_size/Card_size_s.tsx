@@ -1,9 +1,9 @@
 import { withBemMod } from '@bem-react/core';
-import './Card_size_s.css';
 import { cnCard, CardProps } from '../Card';
+import './Card_size_s.css';
 
 interface CardWithModProps extends CardProps {
   size?: string;
 }
 
-export default withBemMod<CardWithModProps>(cnCard(), { size: 's' });
+export const CardSizeS = withBemMod<CardWithModProps>(cnCard(), { size: 's' });

@@ -5,7 +5,7 @@ import './NavMenu.css';
 
 export const cnNavMenu = cn('NavMenu');
 
-const NavMenu: React.SFC<IClassNameProps> = ({ className }) => {
+export const NavMenu: React.SFC<IClassNameProps> = ({ className }) => {
   const menuItems = [
     { id: 1, href: "/", title: "События" },
     { id: 2, href: "#", title: "Сводка" },
@@ -29,5 +29,3 @@ const NavMenu: React.SFC<IClassNameProps> = ({ className }) => {
     </ul>
   );
 }
-
-export default NavMenu;

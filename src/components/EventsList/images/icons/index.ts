@@ -3,7 +3,7 @@ import battery from './battery.svg';
 import cam_white from './cam-white.svg';
 import fridge from './fridge.svg';
 import kettle from './kettle.svg';
-import key from './kettle.svg';
+import key from './key.svg';
 import music from './music.svg';
 import robot_cleaner from './robot-cleaner.svg';
 import router from './router.svg';
@@ -14,9 +14,7 @@ interface ImagesValues {
   [image: string]: string;
 };
 
-const images: ImagesValues = {
+export const icons: ImagesValues = {
   ac_white, battery, cam_white, fridge, kettle, key, music, router, stats, thermal,
   'robot-cleaner': robot_cleaner,
 };
-
-export default images;

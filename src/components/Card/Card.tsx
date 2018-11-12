@@ -6,7 +6,7 @@ import './Card.css';
 export const cnCard = cn('Card');
 
 export interface CardProps extends IClassNameProps {
-  cardInfo: {
+  cardHeading: {
     icon: string;
     title: string;
     source: string;
@@ -14,8 +14,8 @@ export interface CardProps extends IClassNameProps {
   };
 };
 
-const Card: React.SFC<CardProps> = ({ className, cardInfo, children }) => {
-  const { icon, title, source, time } = cardInfo;
+export const Card: React.SFC<CardProps> = ({ className, cardHeading, children }) => {
+  const { icon, title, source, time } = cardHeading;
 
   return (
     <li className={cnCard(null, [className])}>
@@ -35,5 +35,3 @@ const Card: React.SFC<CardProps> = ({ className, cardInfo, children }) => {
     </li>
   );
 };
-
-export default Card;

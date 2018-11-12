@@ -1,10 +1,9 @@
-import { cn } from '@bem-react/classname';
 import { withBemMod } from '@bem-react/core';
-import './Range_thumb_round.css';
 import { cnRange, RangeProps } from '../Range';
+import './Range_thumb_round.css';
 
 interface RangeWithModProps extends RangeProps {
   thumb?: string;
 }
 
-export default withBemMod<RangeWithModProps>(cnRange(), { thumb: 'round' });
+export const RangeThumbRound = withBemMod<RangeWithModProps>(cnRange(), { thumb: 'round' });

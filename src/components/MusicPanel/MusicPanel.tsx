@@ -1,9 +1,10 @@
 import * as React from 'react';
 import { cn } from '@bem-react/classname';
-import { IClassNameProps } from '@bem-react/core';
-import './MusicPanel.css';
+import { IClassNameProps, compose } from '@bem-react/core';
 import { Data } from '../../store/types';
-import Range from '../Range';
+import { Range } from '../Range/Range';
+import { RangeThumbRound } from '../Range/_thumb/Range_thumb_round';
+import './MusicPanel.css';
 
 const cnMusicPanel = cn('MusicPanel');
 
@@ -11,7 +12,9 @@ export interface ShowMenuBtnProps extends IClassNameProps {
   data: Data;
 }
 
-const MusicPanel: React.SFC<ShowMenuBtnProps> = ({ className, data }) => {
+const RangeWithMod = compose(RangeThumbRound)(Range);
+
+export const MusicPanel: React.SFC<ShowMenuBtnProps> = ({ className, data }) => {
   const {
     albumcover = '',
     artist = '',
@@ -27,10 +30,8 @@ const MusicPanel: React.SFC<ShowMenuBtnProps> = ({ className, data }) => {
       <output className={cnMusicPanel('TrackLength')} htmlFor="time" name="time">{track.length}</output>
       <button className={cnMusicPanel('PreviousBtn')}></button>
       <button className={cnMusicPanel('ForwardBtn')}></button>
-      <Range className={cnMusicPanel('VolumeControl')} min={0} max={100} thumb="round"/>
+      <RangeWithMod className={cnMusicPanel('VolumeControl')} min={0} max={100} thumb="round" />
       <output className={cnMusicPanel('Volume')} htmlFor="time" name="time">{volume}</output>
     </div>
   );
 };
-
-export default MusicPanel;

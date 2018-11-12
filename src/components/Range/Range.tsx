@@ -10,7 +10,7 @@ export interface RangeProps extends IClassNameProps {
   max: number;
 }
 
-const Range: React.SFC<RangeProps> = ({ className, min, max }) => (
+export const Range: React.SFC<RangeProps> = ({ className, min, max }) => (
   <input
     className={cnRange(null, [className])}
     type="range"
@@ -18,5 +18,3 @@ const Range: React.SFC<RangeProps> = ({ className, min, max }) => (
     max={max}
   />
 );
-
-export default Range;

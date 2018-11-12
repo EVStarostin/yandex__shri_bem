@@ -3,8 +3,7 @@
   background-color: transparent;
 }
 
-.Card_type_critical,
-.Card_type_critical:hover {
+.Card_type_critical {
   background: #DB5341;
 }
 

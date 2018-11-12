@@ -3,6 +3,10 @@
   grid-row: span 3;
 }
 
+.Card_size_l .Card-Data {
+  font-size: 1.5rem;
+}
+
 @media screen and (max-width: 767.98px) {
   .Card_size_l {
     grid-column: span 6;

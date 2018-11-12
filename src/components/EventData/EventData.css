@@ -1,71 +1,69 @@
-.Event-Details {
+.EventData {
   background-color: #fafafa;
   border-radius: 20px;
   margin: 0 -1.5vw -1.5vw;
   padding: 1.5vw;
+  font-size: 1.25rem;
 }
 
-.Event-Description {
-  font-size: 1.25rem;
+.EventData-Description {
   margin: 5px 0 0;
 }
 
-.Event-Graph {
+.EventData-Graph {
   width: 100%;
   display: block;
   margin-top: 40px;
 }
 
-.Event-Weather {
+.EventData-Weather {
   margin-top: 20px;
   font-size: 1.125rem;
   color: #000;
   display: flex;
 }
 
-.Event-WeatherTemp,
-.Event-WeatherHum {
+.EventData-WeatherTemp,
+.EventData-WeatherHum {
   margin: 0;
   display: inline-block;
 }
 
-.Event-WeatherTemp {
+.EventData-WeatherTemp {
   margin-right: 40px;
 }
 
-.Event-BtnGroup {
+.EventData-BtnGroup {
   margin-top: 25px;
   display: flex;
-  font-size: 1.25rem;
 }
 
-.Event-BtnGroup Button:not(:last-child) {
+.EventData-BtnGroup Button:not(:last-child) {
   margin-right: 15px;
 }
 
 @media screen and (max-width: 767.98px) {
-  .Event-Details {
+  .EventData {
     margin: 0 -15px -20px;
     padding: 15px 15px 20px;
   }
 }
 
 @media screen and (max-width: 575.98px) {
-  .Event-Description {
+  .EventData-Description {
     font-size: 1.633rem;
   }
 
-  .Event-BtnGroup {
+  .EventData-BtnGroup {
     justify-content: space-between;
     font-size: 1.8rem;
   }
 
-  .Event-Weather {
-    font-size: 1.25rem;
+  .EventData-Weather {
     justify-content: space-between;
   }
 
-  .Event-WeatherTemp {
+  .EventData-WeatherTemp {
     margin-right: 0;
   }
 }
