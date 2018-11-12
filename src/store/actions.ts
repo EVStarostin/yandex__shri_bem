@@ -3,7 +3,7 @@ import * as constants from './constants';
 import { Event, StoreState } from './types';
 import { ThunkAction } from 'redux-thunk';
 
-const BASE_URL = "http://node.evstar.ru:8000";
+const BASE_URL = "http://vds.evstar.ru:8000";
 
 export interface FetchEventsSuccess {
   type: constants.FETCH_EVENTS_SUCCESS;
