@@ -3,3 +3,13 @@
   display: grid;
   grid-template: max-content auto 60px / auto;  
 }
+
+.App-Main {
+  margin: 0 12.6%;
+}
+
+@media screen and (max-width: 575.98px) {
+  .App-Main {
+    margin: 0 20px;
+  }
+}

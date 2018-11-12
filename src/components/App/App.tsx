@@ -11,7 +11,7 @@ export const cnApp = cn('App');
 export const App: React.SFC = () => (
   <div className={cnApp()}>
     <Header />
-    <Main />
+    <Main className={cnApp('Main')}/>
     <RegistryConsumer>
       {registries => {
         const registry = registries[cnApp()];

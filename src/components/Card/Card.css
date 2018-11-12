@@ -24,17 +24,8 @@
 .Card-Title {
   margin: 0;
   font-size: 1.5rem;
-  overflow: hidden;
   position: relative;
-  -moz-hyphens: auto;
-  -webkit-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
   display: block;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  text-overflow: ellipsis;
 }
 
 .Card-SourceAndTime {
@@ -74,6 +65,10 @@
   background-image: url(images/Next.svg);
 }
 
+.Card-Data {
+  margin: 0 -1.5vw -1.5vw;
+}
+
 @media screen and (max-width: 991.98px) {
   .Card-Icon {
     width: 36px;
@@ -101,6 +96,10 @@
 
   .Card-OpenBtn {
     bottom: 15px;
+  }
+
+  .Card-Data {
+    margin: 0 -15px -20px;
   }
 }
 

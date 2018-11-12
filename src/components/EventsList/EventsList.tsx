@@ -48,19 +48,18 @@ class EventsListComponent extends React.PureComponent<EventsListProps & StoreSta
     return (
       <ul className={cnEventsList(null, [className])}>
         {events.map((event, idx) => (
-          <RegistryConsumer>
+          <RegistryConsumer key={idx}>
             {registries => {
               const registry = registries[cnApp()];
               const Card = registry.get(cnCard());
               const CardWithMod = compose(CardSizeS, CardSizeM, CardSizeL, CardTypeCritical)(Card);
               return (
-                <CardWithMod key={idx} cardHeading={this.cardHeading(event)} size={event.size} type={event.type}>
+                <CardWithMod cardHeading={this.cardHeading(event)} size={event.size} type={event.type}>
                   <EventData className={cnCard('Data')} event={event} />
                 </CardWithMod>
               );
             }}
           </RegistryConsumer>
-
         ))}
       </ul>
     )
