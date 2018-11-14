@@ -19,8 +19,8 @@ export const Card: React.SFC<CardProps> = ({ className, cardHeading, children })
 
   return (
     <li className={cnCard(null, [className])}>
-      <button className={cnCard('CloseBtn')} />
-      <button className={cnCard('OpenBtn')} />
+      <button className={cnCard('CloseBtn')} aria-label="Закрыть" />
+      <button className={cnCard('OpenBtn')} aria-label="Перейти"/>
       <div className={cnCard('Info')}>
         <div className={cnCard('Heading')}>
           <img className={cnCard('Icon')} src={icon} alt={source} />

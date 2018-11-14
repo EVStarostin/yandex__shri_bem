@@ -26,11 +26,11 @@ export const MusicPanel: React.SFC<ShowMenuBtnProps> = ({ className, data }) => 
     <div className={cnMusicPanel(null, [className])}>
       <img className={cnMusicPanel('AlbumCover')} alt="обложка" src={albumcover} />
       <p className={cnMusicPanel('TrackName')}>{`${artist} - ${track.name}`}</p>
-      <Range className={cnMusicPanel('TimeLine')} min={0} max={100} />
+      <Range className={cnMusicPanel('TimeLine')} min={0} max={100} ariaLabel="Поиск по дорожке" />
       <output className={cnMusicPanel('TrackLength')} htmlFor="time" name="time">{track.length}</output>
-      <button className={cnMusicPanel('PreviousBtn')}></button>
-      <button className={cnMusicPanel('ForwardBtn')}></button>
-      <RangeWithMod className={cnMusicPanel('VolumeControl')} min={0} max={100} thumb="round" />
+      <button className={cnMusicPanel('PreviousBtn')} aria-label="Предыдущая дорожка"></button>
+      <button className={cnMusicPanel('ForwardBtn')} aria-label="Следующая дорожка"></button>
+      <RangeWithMod className={cnMusicPanel('VolumeControl')} min={0} max={100} thumb="round" ariaLabel="Громкость" />
       <output className={cnMusicPanel('Volume')} htmlFor="time" name="time">{volume}</output>
     </div>
   );

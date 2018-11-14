@@ -8,13 +8,15 @@ export const cnRange = cn('Range');
 export interface RangeProps extends IClassNameProps {
   min: number;
   max: number;
+  ariaLabel?: string;
 }
 
-export const Range: React.SFC<RangeProps> = ({ className, min, max }) => (
+export const Range: React.SFC<RangeProps> = ({ className, min, max, ariaLabel }) => (
   <input
     className={cnRange(null, [className])}
     type="range"
     min={min}
     max={max}
+    aria-label={ariaLabel}
   />
 );
