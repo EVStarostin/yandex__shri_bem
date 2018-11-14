@@ -43,6 +43,11 @@
 
 .EventData-Camera {
   margin-top: 20px;
+  font-size: 0;
+}
+
+.EventData-CameraImg {
+  width: 100%;
 }
 
 .EventData-MusicPanel {

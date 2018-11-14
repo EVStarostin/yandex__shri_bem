@@ -1,11 +1,7 @@
-/* Стилизация input:range */
 .Range {
   -webkit-appearance: none;
   width: 100%;
   background: transparent;
-}
-.Range:focus {
-  outline: none;
 }
 .Range::-webkit-slider-runnable-track {
   width: 100%;

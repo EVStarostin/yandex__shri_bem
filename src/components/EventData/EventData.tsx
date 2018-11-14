@@ -3,10 +3,10 @@ import { cn } from '@bem-react/classname';
 import { IClassNameProps, compose } from '@bem-react/core';
 import RichDataImg from './images/Richdata.svg';
 import { MusicPanel } from '../MusicPanel/MusicPanel';
-import { Camera } from '../Camera/Camera';
 import { Button } from '../Button/Button';
 import { ButtonPrimary } from '../Button/_primary/Button_primary';
 import { Event as EventType } from '../../store/types';
+import cameraImg from './images/Bitmap.jpg';
 import './EventData.css';
 
 const cnEventData = cn('EventData');
@@ -44,7 +44,9 @@ export const EventData: React.SFC<EventProps> = ({ className, event }) => {
         </div>
       }
       {(event.data && event.data.image) &&
-        <Camera className={cnEventData('Camera')}/>
+        <div className={cnEventData('Camera')}>
+          <img src={cameraImg} className={cnEventData('CameraImg')} alt="Изображение с камеры" />
+        </div>
       }
     </div>
   );
