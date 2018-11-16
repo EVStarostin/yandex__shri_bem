@@ -6,7 +6,8 @@ import './Card.css';
 export const cnCard = cn('Card');
 
 export interface CardProps extends IClassNameProps {
-  cardHeading: {
+  cardInfo: {
+    type: string;
     icon: string;
     title: string;
     source: string;
@@ -14,16 +15,15 @@ export interface CardProps extends IClassNameProps {
   };
 };
 
-export const Card: React.SFC<CardProps> = ({ className, cardHeading, children }) => {
-  const { icon, title, source, time } = cardHeading;
+export const Card: React.SFC<CardProps> = ({ className, cardInfo, children }) => {
+  const { type, icon, title, source, time } = cardInfo;
 
   return (
     <li className={cnCard(null, [className])} tabIndex={0}>
-      <button className={cnCard('CloseBtn')} aria-label="Закрыть" />
-      <button className={cnCard('OpenBtn')} aria-label="Перейти"/>
       <div className={cnCard('Info')}>
+        {type === 'critical' && <span className={cnCard('Critical')}>Критичное событие</span>}
         <div className={cnCard('Heading')}>
-          <img className={cnCard('Icon')} src={icon} alt={source} />
+          <img className={cnCard('Icon')} src={icon} alt={source} aria-hidden="true"/>
           <h3 className={cnCard('Title')}>{title}</h3>
         </div>
         <div className={cnCard('SourceAndTime')}>
@@ -32,6 +32,8 @@ export const Card: React.SFC<CardProps> = ({ className, cardHeading, children })
         </div>
       </div>
       {children}
+      <button className={cnCard('CloseBtn')} aria-label="Закрыть" />
+      <button className={cnCard('OpenBtn')} aria-label="Перейти"/>
     </li>
   );
 };

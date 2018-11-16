@@ -34,6 +34,7 @@ class EventsListComponent extends React.PureComponent<EventsListProps & StoreSta
     const iconSource = icons[iconName];
 
     return {
+      type: event.type,
       icon: iconSource,
       title: event.title,
       source: event.source,
@@ -54,7 +55,7 @@ class EventsListComponent extends React.PureComponent<EventsListProps & StoreSta
               const Card = registry.get(cnCard());
               const CardWithMod = compose(CardSizeS, CardSizeM, CardSizeL, CardTypeCritical)(Card);
               return (
-                <CardWithMod cardHeading={this.cardHeading(event)} size={event.size} type={event.type}>
+                <CardWithMod cardInfo={this.cardHeading(event)} size={event.size} type={event.type}>
                   <EventData className={cnCard('Data')} event={event} />
                 </CardWithMod>
               );

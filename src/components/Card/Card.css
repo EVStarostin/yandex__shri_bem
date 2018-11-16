@@ -8,6 +8,14 @@
   position: relative;
 }
 
+.Card-Critical {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
 .Card-Heading {
   display: flex;
   font-size: 1.3rem;

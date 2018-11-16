@@ -8,13 +8,15 @@ const cnShowMenuBtn = cn('ShowMenuBtn');
 
 export interface ShowMenuBtnProps extends IClassNameProps {
   handleClick?: () => void;
+  expanded: boolean;
 }
 
-export const ShowMenuBtn: React.SFC<ShowMenuBtnProps> = ({ className, handleClick }) => (
+export const ShowMenuBtn: React.SFC<ShowMenuBtnProps> = ({ className, handleClick, expanded }) => (
   <button
     className={cnShowMenuBtn(null, [className])}
     onClick={handleClick}
+    aria-expanded={expanded}
   >
-    <img src={menuImg} alt="Бургерное меню" />
+    <img src={menuImg} alt="Развернуть/свернуть меню" />
   </button>
 );

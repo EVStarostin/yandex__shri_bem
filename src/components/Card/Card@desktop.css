@@ -3,24 +3,29 @@
 }
 
 .Card:hover, 
-.Card:focus {
+.Card:focus,
+.Card:focus-within {
   background: #F3F3F3;
   box-shadow: 0 2px 6px 0 rgba(197,186,186,0.50);
 }
 
 .Card_type_critical:hover,
-.Card_type_critical:focus {
-  background: #DB5341;
+.Card_type_critical:focus,
+.Card_type_critical:focus-within {
+  background: #c84632;
 }
 
 .Card:hover .Card-CloseBtn,
 .Card:focus .Card-CloseBtn,
+.Card:focus-within .Card-CloseBtn,
 .Card:hover .Card-OpenBtn,
-.Card:focus .Card-OpenBtn {
+.Card:focus .Card-OpenBtn,
+.Card:focus-within .Card-OpenBtn {
   visibility: visible;
 }
 
 .Card:hover .Card-Data,
-.Card:focus .Card-Data {
+.Card:focus .Card-Data,
+.Card:focus-within .Card-Data {
   background-color: #f3f3f3;
 }

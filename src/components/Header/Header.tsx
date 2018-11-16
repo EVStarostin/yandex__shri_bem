@@ -32,10 +32,10 @@ export class Header extends React.PureComponent<IClassNameProps, HeaderState> {
     return (
       <header className={cnHeader(null, [className])}>
         <Logo className={cnHeader('Logo')} />
+        <ShowMenuBtn className={cnHeader('ShowMenuBtn')} handleClick={this.toggleMenu} expanded={menuExpanded} />
         <nav className={cnHeader('Nav')}>
           <NavMenuWithMod className={cnHeader('NavMenu')} expanded={menuExpanded} />
         </nav>
-        <ShowMenuBtn className={cnHeader('ShowMenuBtn')} handleClick={this.toggleMenu}/>
       </header>
     );
   }
