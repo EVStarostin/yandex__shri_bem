@@ -9,6 +9,7 @@
 .Header-Logo {
   margin: 11.5px 0;
   width: 108px;
+  height: 27px;
 }
 
 .Header-Nav {
@@ -23,6 +24,7 @@
   visibility: hidden;
   margin-left: auto;
   margin-right: -10px;
+  order: 1;
 }
 
 @media screen and (max-width: 767.98px) {
@@ -32,7 +34,6 @@
   }
 
   .Header-Nav {
-    order: 1;
     flex: 0 0 100%;
     margin: 0;
   }
@@ -42,6 +43,7 @@
   }
 
   .Header-ShowMenuBtn {
+    order: 0;
     visibility: visible;
   }
 }
